@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabela IMC</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <h1 class="conteudo-titulo">Tabela IMC</h1>
+    <section class="conteudo-tabela">
+        <div class="imc">
+            <h2 class="imc-titulo">IMC</h2>
+            <ul class="imc-lista">
+                <li class="imc-paragrafo">Menos do que 18.5</li>
+                <li class="imc-paragrafo">Entre 18.5 e 24.9</li>
+                <li class="imc-paragrafo">Entre 25 e 29.9</li>
+                <li class="imc-paragrafo">Entre 30 e 34.9</li>
+                <li class="imc-paragrafo">Entre 35 e 39.9</li>
+                <li class="imc-paragrafo">Mais do que 40</li>
+            </ul>
+        </div>
+        <div class="imc">
+            <h2 class="imc-titulo">Resultado</h2>
+            <ul class="imc-lista">
+                <li class="imc-paragrafo">Abaixo do peso</li>
+                <li class="imc-paragrafo">Peso normal</li>
+                <li class="imc-paragrafo">Sobrepeso</li>
+                <li class="imc-paragrafo">Obesidade grau 1</li>
+                <li class="imc-paragrafo">Obesidade grau 2</li>
+                <li class="imc-paragrafo">Obesidade grau 3</li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <form action="#" class="form" id="formulario" method="POST">
+            <h1 class="form-titulo">Calcule o seu IMC</h1>
+            <div>
+                <label class="form-label1">Peso:</label>
+                <input type="text" id="peso" name="peso" class="form-input">
+            </div>
+            <div>
+                <label class="form-label">Altura:</label>
+                <input type="text" id="altura" name="altura" class="form-input">
+            </div>
+            <button class="calc" id="calcular" name="calcular">Calcular</button>
+            <div class="resultadoImc" id="resultadoImc"></div>
+        </form>
+    </section>
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+</body>
+
+</html>
