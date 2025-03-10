@@ -6,7 +6,7 @@ Este projeto é uma aplicação simples para calcular o Índice de Massa Corpora
 
 ## Screenshots
 
-![Calculadora IMC]()
+![Calculadora IMC](./ProjectImg/IMC.png)
 
 
 ## Stack utilizada
