@@ -7,136 +7,192 @@
     text-decoration: none;
 }
 
+body, html{
+    height: 100%;
+    width: 100%;
+}
+
 body{
     font-size: 100%;
     background: linear-gradient(68.15deg, #654543 16.62%, #a46f6f 85.61%);
     overflow: hidden;
-    min-height: 100vh;
-    
 }
 
 .conteudo-titulo{
-    margin-top: 20px;
     font-family: 'Cormorant Upright', serif;
-    font-weight: 600;
-    font-size: 3.3rem;
-    color: #fff5ec;
     text-align: center;
+    font-weight: 600;
+    font-size: 3.2rem;
+    color: #fff5ec;
+    margin-top: 1.2rem;
 }
 
 .conteudo-tabela{
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
 .imc{
-    padding-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-
-}
-
-.imc-lista{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    gap: 1.5rem;
+    padding-top: 30px;
 }
 
 .imc-titulo{
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 2.8rem;
-    color: #f0e3d8;
+    text-align: center;
+    font-size: 1.4;
+    color: #fff5ec;
+
 }
 
-.imc-paragrafo{
+.imc-lista{
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 1.2rem;
+    color: #fff5ec;
+}
+
+
+.imc-paragrafo{
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 1.1rem;
-    color: #e7dfd8;
+    font-size: 1.2rem;
 }
 
 .form{
-    padding-top: 2rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 89px;
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
 
 .form-titulo{
-    padding-top: 2rem;
-    border-top: 0.1px solid #fff5ec;
     font-family: 'Cormorant Upright', serif;
     font-weight: 600;
-    font-size: 3.2rem;
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: #fff5ec 0.3px solid;
     color: #fff5ec;
-    text-align: center;
+    padding-bottom: 1.2rem;
+
 }
 
 .form-label1{
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 1.3rem;
-    color: #f8f3ef;
-    padding-right: 25px;
+    color: #fff5ec;
+    padding-right: 15px;
 }
 
 .form-label{
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 1.3rem;
-    color: #f8f3ef;
-    padding-right: 15px;
+    color: #fff5ec;
+    padding-right: 5px;
 }
 
 .form-input{
-    width: 220px;
+    width: 15rem;
 }
 
 .calc{
-    background-color: #fff9f5;
-    margin-top: 1rem;
-    width: 80px;
-    height: 30px;
-    border: none;
-    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    background-color: #fce9ee;
+    color: #000;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 1rem;
-    color: #000000;
+    height: 1.8rem;
+    width: 5rem;
+    border-radius: 16px;
+    margin-top: 0.5rem;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.4);
     cursor: pointer;
+    transition: 0.5s ease;
 }
 
-.paragrafo-resultado{
-    margin-left: 500px;
-    margin-right: 500px;
-    margin-top: 10px;
-    width: 298px;
-    height: 25px;
-    padding-top: 2px;
-    font-family: 'Montserrat', sans-serif;
+.calc:hover{
+    background-color: #ebced6;
+}
+
+.paragrafo-resultado-v{
     background-color: rgba(86, 45, 43, 0.5);
+    width: 30rem;
+    height: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #fff;
     text-align: center;
-    color: #f8f3ef;
+    padding-top: 0.2rem;
 }
 
 .paragrafo-resultado-f{
-    margin-left: 500px;
-    margin-right: 500px;
-    margin-top: 10px;
-    width: 298px;
-    height: 25px;
-    padding-top: 2px;
+    background-color: rgba(176, 103, 100, 0.4);
+    width: 30rem;
+    height: 2rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    background-color: rgba(176, 103, 100, 0.4);
+    font-size: 1.2rem;
+    color: #fff;
     text-align: center;
-    color: #f8f3ef;
+    padding-top: 0.2rem;
+}
+
+@media screen and (max-width: 767px){
+    main{
+        height: 100vh;
+        width: 100vw;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .conteudo-titulo{
+        font-size: 4.5rem;
+    }
+
+    .imc-titulo{
+        font-size: 2.4rem;
+    }
+
+    .imc-paragrafo{
+        font-size: 1.7rem;
+    }
+
+    .form-titulo{
+        font-size: 3rem;
+    }
+
+    .form-label1,
+    .form-label{
+        font-size: 1.3rem;
+    }
+
+    input{
+        height: 1.3rem;
+    }
+
+    .calc{
+        height: 2.2rem;
+        width: 5.5rem;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .paragrafo-resultado-v,
+    .paragrafo-resultado-f{
+        height: 2.2rem;
+        font-size: 1.4rem;
+    }
 }

@@ -30,50 +30,51 @@ form.addEventListener('submit', function (e) {
 });
 //Função que recebe o IMC e avalia em qual categoria o valor se encaixa.
 function getCalculoImc(imc) {
-    const nivel = ['Abaixo do peso', 'Peso normal', 'Sobrepeso',
+    let nivel = ['Abaixo do peso', 'Peso normal', 'Sobrepeso',
         'Obesidade grau 1', 'Obesidade grau 2', 'Obesidade grau 3'];
+
 
     if (imc >= 39.9) {
         return nivel[5];
     }
 
-    if (imc >= 34.9) {
+    else if (imc >= 34.9) {
         return nivel[4];
     }
 
-    if (imc >= 29.9) {
+    else if (imc >= 29.9) {
         return nivel[3];
     }
 
-    if (imc >= 24.9) {
+    else if (imc >= 24.9) {
         return nivel[2];
     }
 
-    if (imc >= 18.5) {
+    else if (imc >= 18.5) {
         return nivel[1];
     }
 
-    if (imc < 18.5) {
+    else if (imc < 18.5) {
         return nivel[0];
     }
 }
 //Função para fazer o calculo do IMC e retorna o resultado com 1 casa após o ponto.
 function getImc(peso, altura) {
-    const imc = peso / altura ** 2;
+    let imc = peso / altura ** 2;
     return imc.toFixed(1);
 }
 //função para criar um paragráfo com classe inclusa.
 function criaP() {
-    const p = document.createElement('p');
+    let p = document.createElement('p');
     p.classList.add('paragrafo-resultado');
     return p;
 }
 //Função que recebe o resultado do IMC, verifica se é válida e caso seja ela verdadeira 
 //o resultado será exibido em marsala escuro e caso seja falso será exibido em marsala claro.
 function setResultado(msg, isValid) {
-    const resultado = document.querySelector('#resultadoImc');
+    let resultado = document.querySelector('#resultadoImc');
     resultado.innerHTML = '';
-    const p = criaP();
+    let p = criaP();
 
     if (isValid) {
         p.classList.add('paragrafo-resultado-v');
